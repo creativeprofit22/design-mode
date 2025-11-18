@@ -1,0 +1,194 @@
+{
+  "template_id": "saas-product-launch",
+  "name": "SaaS Product Launch",
+  "description": "Complete landing page for launching a SaaS product. Includes hero, features, pricing, testimonials, and CTA sections.",
+  "icon": "FileText",
+  "best_for": ["B2B SaaS", "B2C SaaS", "Web applications", "Software products"],
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "required": true,
+      "components": ["heading", "subheading", "cta_button", "hero_image_or_video"],
+      "layout_options": ["centered", "split_60_40", "split_50_50"],
+      "default_layout": "centered"
+    },
+    {
+      "id": "social_proof",
+      "name": "Social Proof",
+      "required": false,
+      "components": ["customer_logos", "key_metrics", "testimonial_highlight"],
+      "placement": "after_hero",
+      "rationale": "78% of top SaaS landing pages include early social proof"
+    },
+    {
+      "id": "features",
+      "name": "Features Section",
+      "required": true,
+      "components": ["feature_cards"],
+      "min_features": 3,
+      "max_features": 6,
+      "layout_options": ["3_column_grid", "2_column_grid", "bento_box"],
+      "default_layout": "3_column_grid"
+    },
+    {
+      "id": "how_it_works",
+      "name": "How It Works",
+      "required": false,
+      "components": ["step_cards"],
+      "num_steps": 3,
+      "rationale": "67% of SaaS pages include process explanation to reduce perceived complexity"
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing Section",
+      "required": false,
+      "components": ["pricing_cards"],
+      "tiers": [3, 2, 4],
+      "default_tiers": 3,
+      "variants": ["transparent_pricing", "contact_sales", "free_trial_only"]
+    },
+    {
+      "id": "testimonials",
+      "name": "Testimonials",
+      "required": false,
+      "components": ["testimonial_cards"],
+      "min_testimonials": 3,
+      "layout_options": ["carousel", "grid", "single_highlight"]
+    },
+    {
+      "id": "faq",
+      "name": "FAQ Section",
+      "required": false,
+      "components": ["accordion_items"],
+      "min_questions": 5,
+      "max_questions": 10
+    },
+    {
+      "id": "final_cta",
+      "name": "Final CTA",
+      "required": true,
+      "components": ["heading", "subheading", "cta_button"],
+      "layout": "centered",
+      "rationale": "95% of landing pages repeat CTA at end"
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "required": true,
+      "components": ["logo", "nav_links", "social_links", "legal_links"],
+      "layout": "4_column_grid"
+    }
+  ],
+  "wizard_questions": {
+    "product_basics": {
+      "product_name": {
+        "type": "text",
+        "label": "Product Name",
+        "placeholder": "Acme Analytics",
+        "required": true
+      },
+      "tagline": {
+        "type": "text",
+        "label": "Tagline (1 sentence value proposition)",
+        "placeholder": "Turn marketing data into boardroom-ready insights in seconds",
+        "required": true,
+        "max_length": 100
+      }
+    },
+    "features": {
+      "feature_count": {
+        "type": "number",
+        "label": "How many features to highlight?",
+        "min": 3,
+        "max": 6,
+        "default": 5
+      },
+      "features_list": {
+        "type": "array",
+        "label": "Key Features",
+        "min_items": 3,
+        "item_schema": {
+          "name": {
+            "type": "text",
+            "label": "Feature Name",
+            "placeholder": "Real-time Dashboards"
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Description (benefit-focused)",
+            "placeholder": "Make decisions on current data, not yesterday's numbers"
+          }
+        },
+        "help_text": "Click 'I need help brainstorming features' if unsure"
+      }
+    },
+    "target_audience": {
+      "primary_user": {
+        "type": "text",
+        "label": "Who is your primary user?",
+        "placeholder": "Marketing managers at B2B companies",
+        "required": true
+      },
+      "pain_point": {
+        "type": "text",
+        "label": "What's their biggest pain point?",
+        "placeholder": "Spend 10+ hours weekly compiling reports from multiple tools",
+        "required": true
+      }
+    },
+    "pricing": {
+      "show_pricing": {
+        "type": "select",
+        "label": "Do you have pricing to display?",
+        "options": [
+          { "value": "yes", "label": "Yes - I'll provide pricing tiers" },
+          { "value": "no", "label": "No - Skip pricing section" },
+          { "value": "demo", "label": "Not sure - Show 'Request Demo' instead" }
+        ],
+        "default": "yes"
+      },
+      "pricing_tiers": {
+        "type": "array",
+        "label": "Pricing Tiers",
+        "condition": "show_pricing === 'yes'",
+        "min_items": 2,
+        "max_items": 4,
+        "default_count": 3
+      }
+    },
+    "cta": {
+      "primary_cta": {
+        "type": "select",
+        "label": "What's the primary action you want users to take?",
+        "options": [
+          { "value": "start_trial", "label": "Start Free Trial" },
+          { "value": "schedule_demo", "label": "Schedule Demo" },
+          { "value": "get_access", "label": "Get Early Access" },
+          { "value": "download", "label": "Download App" },
+          { "value": "custom", "label": "Custom CTA" }
+        ],
+        "required": true
+      }
+    }
+  },
+  "auto_research_triggers": [
+    {
+      "trigger": "user_clicks_help_brainstorm_features",
+      "research_query": "common SaaS features for {product_category}",
+      "presentation": "list_with_examples"
+    },
+    {
+      "trigger": "pain_point_too_vague",
+      "research_query": "specific pain points for {target_audience}",
+      "presentation": "multiple_choice_with_rationale"
+    }
+  ],
+  "recommended_aesthetic": "minimal-clean",
+  "estimated_completion_time": "10-15 minutes",
+  "estimated_output": {
+    "components": 12,
+    "bundle_size": "85-95KB gzipped",
+    "performance_score": "95+"
+  }
+}
