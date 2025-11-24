@@ -11,7 +11,7 @@
 ### Step 1: Gather Information
 
 **Required Intel:**
-1. Aesthetic preference (Minimal, Bold, Glassmorphism, Playful)
+1. Aesthetic preference (Choose from 10 options - see knowledge-bases/design-kb/aesthetic-styles.md)
 2. Brand color (if provided)
 3. Typography preference
 4. Target audience

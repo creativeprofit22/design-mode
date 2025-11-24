@@ -555,7 +555,7 @@ NO EXCEPTIONS: Accessibility + Performance mandatory
 - [ ] Save state
 
 **Step 3: Style & Preferences**
-- [ ] Present 4 aesthetics (Minimal, Bold, Glassmorphism, Playful)
+- [ ] Present 10 aesthetics (see knowledge-bases/design-kb/aesthetic-styles.md for complete list)
 - [ ] "Recommend based on my brief" → Auto-research
 - [ ] Color palette selection
 - [ ] Typography selection

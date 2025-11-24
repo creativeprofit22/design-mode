@@ -14,6 +14,7 @@ Design Mode is a wizard-based design system generator for Agent Girl that create
 - 4-step wizard flow (Template → Brief → Style → Review)
 - Auto-research when user lacks information
 - 6 specialist agents (Component Builder, UI Designer, etc.)
+- **10 production-tested design aesthetics** (from Minimal to Y2K/Retro)
 - Complete mode isolation (no contamination from other modes)
 - Production-ready output (WCAG AA, < 90KB bundle, LCP < 2.0s)
 
@@ -84,7 +85,7 @@ Orchestrator: Detects new project → Starts wizard flow
 - UX Researcher validates completeness (background)
 
 **Step 3: Style & Preferences**
-- User selects aesthetic (Minimal, Bold, Glassmorphism, Playful)
+- User selects from **10 aesthetic options** (Minimal Clean, Bold Colorful, Glassmorphism, Playful Minimalism, Brutalist, Neubrutalism, Bento Grid, Y2K/Retro, Swiss/International, Organic/Morphism)
 - Color palette, typography, special features
 - If user asks "What should I choose?" → Auto-research recommends based on brief
 - UI Designer generates mockup options (background)

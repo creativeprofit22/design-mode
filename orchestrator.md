@@ -66,7 +66,7 @@ IF request is vague or multi-part:
    - UX Researcher validates completeness (background)
 
 3. **Step 3: Style & Preferences Selection**
-   - Present 4 aesthetic options (Minimal, Bold, Glassmorphism, Playful)
+   - Present 10 aesthetic options (Minimal Clean, Bold Colorful, Glassmorphism, Playful Minimalism, Brutalist, Neubrutalism, Bento Grid, Y2K/Retro, Swiss/International, Organic/Morphism)
    - **AUTO-RESEARCH TRIGGER:** If user asks "What's popular?" or "Which should I choose?"
    - Gather color preferences, typography, special features
    - UI Designer generates mockup options (background)
@@ -421,7 +421,7 @@ USER: "Create a button component with hover animations"
 ORCHESTRATOR:
 "I'll create a button component for you. A few quick questions:
 
-1. Style preference? (Minimal, Bold, Glassmorphism, Playful)
+1. Style preference? (Choose from 10 aesthetics - see aesthetic-styles.md for full list)
 2. Size variants needed? (sm, md, lg, xl)
 3. Color variants? (primary, secondary, destructive, ghost, link)
 4. Dark mode support?
